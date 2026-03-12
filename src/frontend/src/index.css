@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Navy Blue primary */
+    --primary: 0.28 0.08 255;
+    --primary-foreground: 0.98 0 0;
+
+    /* Saffron accent */
+    --accent: 0.72 0.18 55;
+    --accent-foreground: 0.15 0 0;
+
+    /* Backgrounds */
+    --background: 0.99 0 0;
+    --foreground: 0.15 0.02 255;
+
+    /* Card */
+    --card: 0.99 0 0;
+    --card-foreground: 0.15 0.02 255;
+
+    /* Secondary - soft cream */
+    --secondary: 0.96 0.01 80;
+    --secondary-foreground: 0.2 0.04 255;
+
+    /* Muted */
+    --muted: 0.95 0.005 255;
+    --muted-foreground: 0.5 0.03 255;
+
+    /* Destructive */
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.98 0 0;
+
+    /* Border / Input */
+    --border: 0.88 0.01 255;
+    --input: 0.88 0.01 255;
+    --ring: 0.28 0.08 255;
+
+    /* Popover */
+    --popover: 0.99 0 0;
+    --popover-foreground: 0.15 0.02 255;
+
+    /* Charts */
+    --chart-1: 0.72 0.18 55;
+    --chart-2: 0.28 0.08 255;
+    --chart-3: 0.52 0.14 145;
+    --chart-4: 0.6 0.12 30;
+    --chart-5: 0.45 0.1 285;
+
+    /* Sidebar */
+    --sidebar: 0.15 0.05 255;
+    --sidebar-foreground: 0.95 0 0;
+    --sidebar-primary: 0.72 0.18 55;
+    --sidebar-primary-foreground: 0.15 0 0;
+    --sidebar-accent: 0.25 0.06 255;
+    --sidebar-accent-foreground: 0.95 0 0;
+    --sidebar-border: 0.25 0.04 255;
+    --sidebar-ring: 0.72 0.18 55;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-saffron {
+    color: oklch(0.72 0.18 55);
+  }
+  .bg-saffron {
+    background-color: oklch(0.72 0.18 55);
+  }
+  .bg-navy {
+    background-color: oklch(0.22 0.08 255);
+  }
+  .text-navy {
+    color: oklch(0.22 0.08 255);
+  }
+  .bg-india-green {
+    background-color: oklch(0.4 0.14 145);
+  }
+  .text-india-green {
+    color: oklch(0.4 0.14 145);
+  }
+  .border-saffron {
+    border-color: oklch(0.72 0.18 55);
+  }
+  .tricolor-bar {
+    height: 4px;
+    background: linear-gradient(
+      to right,
+      oklch(0.72 0.18 55) 33.3%,
+      oklch(0.98 0 0) 33.3%,
+      oklch(0.98 0 0) 66.6%,
+      oklch(0.4 0.14 145) 66.6%
+    );
+  }
+}
